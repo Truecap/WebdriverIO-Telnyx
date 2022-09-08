@@ -10,6 +10,7 @@ describe("Pricing", () => {
     await logInPage.logInIfNeeded();
     await browser.pause(3000);
     await myProfilePage.profileIcon.moveTo();
+    await browser.pause(3000);
     await myProfilePage.pricingButton.click();
     await pricingPage.pricingContryDrpDwn.click();
     await browser.pause(3000);

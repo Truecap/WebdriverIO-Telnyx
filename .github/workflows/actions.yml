@@ -13,6 +13,12 @@ jobs:
           run: npm install
         - name: Test
           run: npm run alltests
+
+        - uses: actions/upload-artifact@v1
+          if: failure()
+          with:
+            name: logs
+            path: logs
        
 
         - name: Create Report
