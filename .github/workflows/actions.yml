@@ -12,10 +12,9 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run alltest
-        - uses: actions/upload-artifact@v1
-          if: failure()
-          
+          run: npm run alltests
+       
+
         - name: Create Report
           if: always()
           run: npm run allure:generate
