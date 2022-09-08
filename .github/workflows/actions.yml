@@ -1,43 +1,72 @@
-name: CI
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 18
-        - name: Install
-          run: npm install
-        - name: Test
-          run: npm run alltests
+name: WebdriverIo-Telnyx
 
-        - uses: actions/upload-artifact@v1
-          if: failure()
-          with:
-            name: logs
-            path: logs
+on:
+  push:
+    branches: [ main ]
+  # pull_request:
+  #   branches: [ master ]
+
+jobs:
+  Run_test:
+    runs-on: ubuntu-20.04 # Choosing OS
+    strategy:
+      matrix:
+        node-version: [16.15.1]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+      # trying to install npm packages
+    - run: npm i -g npm@latest
+    - run: npm i npm@latest
+    - run: npm i
+    - name: run test
+         # trying to run tests
+      run: npm run alltests
+# name: CI
+# on: [push, pull_request]
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#         - name: Checkout
+#           uses: actions/checkout@v2
+#         - uses: actions/setup-node@v1
+#           with:
+#             node-version: 18
+#         - name: Install
+#           run: npm install
+#         - name: Test
+#           run: npm run alltests
+
+#         - uses: actions/upload-artifact@v1
+#           if: failure()
+#           with:
+#             name: logs
+#             path: logs
        
 
-        - name: Create Report
-          if: always()
-          run: npm run allure:generate
-        - name: Upload artifact allure-report
-          uses: actions/upload-artifact@v1
-          if: always()
-          with:
-              name: allure-report
-              path: ./allure-report
-        - name: Deploy report
-          uses: JamesIves/github-pages-deploy-action@v4
-          if: always()
-          with:
-              ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
-              BRANCH: new_branch # The branch the action should deploy to.
-              FOLDER: allure-report # The folder the action should deploy.
-              target-folder: docs
+#         - name: Create Report
+#           if: always()
+#           run: npm run allure:generate
+#         - name: Upload artifact allure-report
+#           uses: actions/upload-artifact@v1
+#           if: always()
+#           with:
+#               name: allure-report
+#               path: ./allure-report
+#         - name: Deploy report
+#           uses: JamesIves/github-pages-deploy-action@v4
+#           if: always()
+#           with:
+#               ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
+#               BRANCH: new_branch # The branch the action should deploy to.
+#               FOLDER: allure-report # The folder the action should deploy.
+#               target-folder: docs
           
 # on:  
 #     push:
