@@ -15,10 +15,25 @@ jobs:
           run: npm run alltest
         - uses: actions/upload-artifact@v1
           if: failure()
+          
+        - name: Create Report
+          if: always()
+          run: npm run allure:generate
+        - name: Upload artifact allure-report
+          uses: actions/upload-artifact@v1
+          if: always()
           with:
-            name: logs
-            path: logs
-# name: CI
+              name: allure-report
+              path: ./allure-report
+        - name: Deploy report
+          uses: JamesIves/github-pages-deploy-action@v4
+          if: always()
+          with:
+              ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
+              BRANCH: new_branch # The branch the action should deploy to.
+              FOLDER: allure-report # The folder the action should deploy.
+              target-folder: docs
+          
 # on:  
 #     push:
 #         branches: [main]
