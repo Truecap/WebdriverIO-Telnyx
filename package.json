@@ -12,6 +12,12 @@
         "wdio-chromedriver-service": "^7.3.2"
     },
     "scripts": {
-        "wdio": "wdio run wdio.conf.js"
+        "wdio": "wdio run wdio.conf.js",
+        "alltests": "npx wdio run ./wdio.conf.js --spec",
+        "login": "npx wdio run ./wdio.conf.js --spec Login.js",
+        "allure:generate": "npx allure generate allure-results --clean",
+        "report": "npx allure generate reports/ui/allure-results --clean -o reports/ui/allure-report && allure open reports/ui/allure-report",
+        "clear": "rm -r reports/** || true"
+
     }
 }
