@@ -59,7 +59,7 @@ jobs:
           if: always()
           with:
               ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
-              BRANCH: new_branch 
+              BRANCH: master
               FOLDER: allure-report 
               target-folder: docs
           
