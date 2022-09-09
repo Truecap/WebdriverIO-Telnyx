@@ -8,9 +8,10 @@ describe("Support Center", () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();
-    await myProfilePage.supportCenterButton.click();
-    await browser.switchWindow("Telnyx Support");
     await browser.pause(3000);
+    await myProfilePage.supportCenterButton.click();
+    await browser.pause(3000);
+    await browser.switchWindow("Telnyx Support");
     await supportPage.searchInput.addValue("lookup");
     await browser.keys("Enter");
     await supportPage.lookUpSearchResult.click();

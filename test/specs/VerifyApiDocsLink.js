@@ -10,6 +10,7 @@ describe("API Docs", () => {
     await logInPage.logInIfNeeded();
     await myProfilePage.homePagebutton.click();
     await browser.pause(3000);
+    //await myProfilePage.apiDocsButton.scrollIntoView();
     await myProfilePage.apiDocsButton.click();
     await apiDocsPage.headerApiDocsPage.isDisplayed();
     await browser.pause(3000);

@@ -3,7 +3,7 @@ class MyProfilePage {
     return $('[class*="tx-27OtCC"]');
   }
   get homePagebutton() {
-    return $('[href="#/app/home"]');
+    return $('(//ul[@class="list-unstyled"])[3]//li[1]');
   }
   get logOutButton() {
     return $('[class="tx-1Iv0kw"]');

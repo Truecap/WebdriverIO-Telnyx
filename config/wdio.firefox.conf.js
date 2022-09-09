@@ -1,13 +1,12 @@
 const {config} = require("./wdio.conf");
 require("path");
-const chromeConfig = {
+const firefoxConfig = {
     ...config,
-    services: [['selenium-standalone', {chrome: 'latest'}]],
-    services: [['chromedriver']],
+    services: [['selenium-standalone', {firefox: 'latest'}]],
     capabilities: [{
         maxInstances: 1,
-        browserName: "chrome",
-        'goog:chromeOptions': {
+        browserName: "firefox",
+        'moz:firefoxOptions': {
             args: ['--start-maximized', '--no-sandbox', '--disable-gpu', '--window-size=1920,1080', '--allow-insecure-localhost']
         },
     }],
@@ -16,4 +15,4 @@ const chromeConfig = {
 
 };
 
-exports.config = chromeConfig;
+exports.config = firefoxConfig;

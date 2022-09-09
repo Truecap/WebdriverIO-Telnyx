@@ -22,11 +22,12 @@ class LoginPage {
     if (await this.emailInput.isDisplayed()) {
       await this.emailInput.addValue("testsne13@gmail.com");
       await this.passwordInput.addValue("Test1234test!");
+      await browser.pause(3000);
       await this.submitButton.click();
       await browser.waitUntil(
         async () => await $('[class*="tx-27OtCC"]').isDisplayed(),
         {
-          timeout: 30000,
+          timeout: 50000,
         }
       );
     }

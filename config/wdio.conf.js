@@ -10,6 +10,11 @@ exports.config = {
         maxInstances: 5,
         browserName: 'chrome',
         acceptInsecureCerts: true
+    },
+    {
+        maxInstances: 5,
+        browserName: 'firefox',
+        
     }],
     logLevel: 'warn',
     bail: 0,
@@ -19,7 +24,7 @@ exports.config = {
     connectionRetryCount: 3,
     services: [
         ['chromedriver'],
-        // ['firefox-profile'],
+        ['firefox-profile'],
         // ['MicrosoftEdge']
     ],
     framework: 'mocha',
@@ -30,7 +35,7 @@ exports.config = {
     }], 'spec'],
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 90000
     },
     //
     // =====
