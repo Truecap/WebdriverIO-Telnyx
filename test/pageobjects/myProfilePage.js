@@ -31,8 +31,8 @@ class MyProfilePage {
   }
 
   async logOut() {
-    await this.profileIcon.moveTo();
     await browser.pause(2000);
+    await this.profileIcon.moveTo();
     await this.logOutButton.click();
   }
   async validateSuccessfulLogin() {
