@@ -27,7 +27,9 @@
 #          # trying to run tests
 #       run: npm run alltests
 name: CI
-on: [push, pull_request]
+on: 
+    push:
+        branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,23 +45,23 @@ jobs:
           run: npm run test:firefox:headless
 
 
-#         - name: Create Report
-#           if: always()
-#           run: npm run allure:generate
-#         - name: Upload artifact allure-report
-#           uses: actions/upload-artifact@v1
-#           if: always()
-#           with:
-#               name: allure-report
-#               path: ./allure-report
-#         - name: Deploy report
-#           uses: JamesIves/github-pages-deploy-action@v4
-#           if: always()
-#           with:
-#               ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
-#               BRANCH: new_branch # The branch the action should deploy to.
-#               FOLDER: allure-report # The folder the action should deploy.
-#               target-folder: docs
+        - name: Create Report
+          if: always()
+          run: npm run allure:generate
+        - name: Upload artifact allure-report
+          uses: actions/upload-artifact@v1
+          if: always()
+          with:
+              name: allure-report
+              path: ./allure-report
+        - name: Deploy report
+          uses: JamesIves/github-pages-deploy-action@v4
+          if: always()
+          with:
+              ACCESS_TOKEN: ${{'secrets.ACCESS_TOKEN'}}
+              BRANCH: new_branch 
+              FOLDER: allure-report 
+              target-folder: docs
           
 # on:  
 #     push:
