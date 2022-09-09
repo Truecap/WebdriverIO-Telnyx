@@ -27,5 +27,8 @@
         "allure:generate": "npx allure generate allure-results --clean",
         "report": "npx allure generate reports/ui/allure-results --clean -o reports/ui/allure-report && allure open reports/ui/allure-report",
         "clear": "rm -r reports/** || true"
+    },
+    "dependencies": {
+        "allure-commandline": "^2.18.1"
     }
 }
