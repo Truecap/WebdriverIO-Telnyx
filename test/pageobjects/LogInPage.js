@@ -27,7 +27,7 @@ class LoginPage {
       await browser.waitUntil(
         async () => await $('[class*="tx-27OtCC"]').isDisplayed(),
         {
-          timeout: 120000,
+          timeout: 50000,
         }
       );
     }
