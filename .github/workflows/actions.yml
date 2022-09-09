@@ -42,7 +42,7 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run test:firefox:ui:login
+          run: npm run test:firefox:headless
 
 
         - name: Create Report
