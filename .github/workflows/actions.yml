@@ -42,9 +42,9 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          # run: npm run test:firefox:headless
+          run: npm run test:firefox:headless
           # run: npm run test:chrome:headless
-          run: npm run test:chrome:headless:login
+          # run: npm run test:chrome:headless:login
 
 
         - name: Create Report
