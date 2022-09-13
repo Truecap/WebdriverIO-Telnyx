@@ -4,4 +4,4 @@ ADD . /app
 
 RUN npm install
 
-RUN npm run test:chrome:headless
+RUN npm run test:chrome:headless:login
