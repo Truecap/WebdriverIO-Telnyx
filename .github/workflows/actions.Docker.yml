@@ -1,0 +1,15 @@
+name: CI
+on: 
+    push:
+        branches: [master]
+jobs:
+  build:
+    runs-on: truesne/wdiotelnyx
+    steps:
+        - name: Test
+          # run: npm run test:firefox:headless
+          run: npm run test:chrome:headless
+          # run: npm run test:chrome:headless:login
+
+
+        

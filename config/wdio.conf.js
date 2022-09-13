@@ -27,6 +27,7 @@ exports.config = {
     services: [
         ['chromedriver'],
         ['firefox-profile'],
+        ['docker']
         // ['MicrosoftEdge']
     ],
     framework: 'mocha',
