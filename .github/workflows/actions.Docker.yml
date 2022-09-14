@@ -16,7 +16,9 @@ jobs:
             with:
                 image: truesne/wdiotelnyxtest
                 options: -v ${{ github.workspace }}:/var/www
-                run: npm run test:chrome:headless:login
+                run: |
+                npm install
+                npm run test:chrome:headless:login
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
