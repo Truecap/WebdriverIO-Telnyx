@@ -20,4 +20,4 @@ ADD . /app
 
 RUN npm install
 
-# CMD npm run test:chrome:headless:login
+CMD npm run test:chrome:headless:login
