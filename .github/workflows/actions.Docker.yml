@@ -4,8 +4,9 @@ on:
         branches: [master]
 jobs:
   build:
-    runs-on: truesne/wdiotelnyx
     steps:
+      - name: docker test
+        uses: docker://truesne/wdiotelnyxtest
         - name: Test
           # run: npm run test:firefox:headless
           # run: npm run test:chrome:headless
