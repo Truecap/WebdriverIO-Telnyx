@@ -1,4 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Sep 14 13:13:28 UTC 2022","Wed Sep 14 13:13:47 UTC 2022","19121","","Login functionality","","Login functionality","Login with invalid email","Login with invalid email",""
-"passed","Wed Sep 14 13:13:47 UTC 2022","Wed Sep 14 13:14:06 UTC 2022","18785","","Login functionality","","Login functionality","Login with invalid password","Login with invalid password",""
-"broken","Wed Sep 14 13:12:48 UTC 2022","Wed Sep 14 13:13:28 UTC 2022","40253","","Login functionality","","Login functionality","Login with valid credentials","Login with valid credentials",""
+"passed","Wed Sep 14 13:19:36 UTC 2022","Wed Sep 14 13:19:55 UTC 2022","19044","","Login functionality","","Login functionality","Login with invalid password","Login with invalid password",""
+"broken","Wed Sep 14 13:18:40 UTC 2022","Wed Sep 14 13:19:17 UTC 2022","36954","","Login functionality","","Login functionality","Login with valid credentials","Login with valid credentials",""
+"passed","Wed Sep 14 13:19:17 UTC 2022","Wed Sep 14 13:19:36 UTC 2022","19761","","Login functionality","","Login functionality","Login with invalid email","Login with invalid email",""
