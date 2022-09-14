@@ -17,6 +17,7 @@ jobs:
                 image: truesne/wdiotelnyxtest
                 options: -v ${{ github.workspace }}:/var/www
                 run: |
+                    composer install
                     npm install
                     npm run test:chrome:headless:login
 # jobs:
