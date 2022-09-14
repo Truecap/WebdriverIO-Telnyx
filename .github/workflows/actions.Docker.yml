@@ -14,7 +14,7 @@ jobs:
           - name: Run the build process with Docker
             uses: addnab/docker-run-action@v3
             with:
-                image: truesne/wdiotelnyxtestrun
+                image: truesne/wdiotelnyxtest
                 options: -v ${{ github.workspace }}:/var/www
                 run: npm run test:chrome:headless:login
 # jobs:
