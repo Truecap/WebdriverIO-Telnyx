@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: truesne/wdiogithub
+      options: --shm-size=4gb
     steps:
       - name: Test
         run: cd /app && npm run test:chrome:headless:login
