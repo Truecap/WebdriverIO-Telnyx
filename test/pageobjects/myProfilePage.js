@@ -31,9 +31,10 @@ class MyProfilePage {
   }
 
   async logOut() {
-    await browser.pause(3000);
+    await this.homePagebutton.click();
     await this.profileIcon.moveTo();
-    await browser.pause(3000);
+    // await browser.elementHover('[class*="tx-27OtCC"]');
+    await browser.pause(5000);
     await this.logOutButton.click();
   }
   async validateSuccessfulLogin() {
