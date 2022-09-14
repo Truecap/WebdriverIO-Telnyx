@@ -13,9 +13,9 @@ describe("API Docs", () => {
     //await myProfilePage.apiDocsButton.scrollIntoView();
     await myProfilePage.apiDocsButton.click();
     await apiDocsPage.headerApiDocsPage.isDisplayed();
-    await browser.pause(3000);
+    await browser.pause(5000);
     await browser.switchWindow("Home / Telnyx Customer Portal");
-    await browser.pause(3000);
+    await browser.pause(5000);
     await myProfilePage.profileIcon.isDisplayed();
   });
 });
