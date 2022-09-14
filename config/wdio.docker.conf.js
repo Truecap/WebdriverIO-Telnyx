@@ -1,3 +1,4 @@
+/*
 const {config} = require("./wdio.conf");
 require("path");
 const dockerConfig = {
@@ -17,4 +18,4 @@ capabilities: [{
 }],
 // ...
 }
-exports.config = dockerConfig;
+exports.config = dockerConfig; */
