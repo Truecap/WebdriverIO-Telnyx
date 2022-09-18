@@ -4,7 +4,7 @@ const myProfilePage = require("../pageobjects/myProfilePage.js");
 const networkingPage = require("../pageobjects/NetworkingPage.js");
 
 describe("Networking functionality", () => {
-  it("Create networking", async () => {
+  xit("Create networking", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();
@@ -19,7 +19,7 @@ describe("Networking functionality", () => {
     await browser.pause(3000);
     await networkingPage.networkSuccessfulMessage.isDisplayed();
   });
-  it("Delete networking", async () => {
+  xit("Delete networking", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();

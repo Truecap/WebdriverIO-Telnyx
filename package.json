@@ -16,10 +16,10 @@
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.js",
+        "test:chrome:ui": "npx wdio config/wdio.chrome.conf.js",
         "test:chrome:headless": "npx wdio config/wdio.chrome.headless.conf.js",
         "test:chrome:headless:login": "npx wdio config/wdio.chrome.headless.conf.js --spec Login.js",
         "test:chrome:ui:login": "npx wdio config/wdio.chrome.conf.js --spec Login.js",
-        "test:firefox:ui:SupportCenter": "npx wdio config/wdio.firefox.conf.js --spec VerifySupportCenterButton.js",
         "test:firefox:ui:login": "npx wdio config/wdio.firefox.conf.js --spec Login.js",
         "test:firefox:headless:login": "npx wdio config/wdio.firefox.headless.conf.js --spec Login.js",
         "test:firefox:headless": "npx wdio config/wdio.firefox.headless.conf.js",

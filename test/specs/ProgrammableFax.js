@@ -4,7 +4,7 @@ const myProfilePage = require("../pageobjects/myProfilePage.js");
 const programmabelFaxPage = require("../pageobjects/ProgrammabelFaxPage.js");
 
 describe("Programble Fax", () => {
-  it("Create Programble Fax App.", async () => {
+  xit("Create Programble Fax App.", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();
@@ -20,7 +20,7 @@ describe("Programble Fax", () => {
     await browser.pause(2000);
     await programmabelFaxPage.successfullMessage.isDisplayed();
   });
-  it("Edit Programble Fax App.", async () => {
+  xit("Edit Programble Fax App.", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();
@@ -35,7 +35,7 @@ describe("Programble Fax", () => {
     await browser.pause(2000);
     await programmabelFaxPage.successfullMessage.isDisplayed();
   });
-  it("Delete Programble Fax App.", async () => {
+  xit("Delete Programble Fax App.", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();

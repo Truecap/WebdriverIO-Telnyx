@@ -23,6 +23,8 @@ npm init wdio ./path/to/new/project
 
 ## Run test
 
+# You should have installeted browsers (firedox/chrome) for local running ui tests
+
 -You can start your test suite by using the run command and pointing to the WebdriverIO config that you just created:
 
 npx wdio run ./wdio.conf.js

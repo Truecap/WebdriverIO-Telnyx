@@ -4,7 +4,7 @@ const myProfilePage = require("../pageobjects/myProfilePage.js");
 const verifyPage = require("../pageobjects/VerifyPage.js");
 
 describe("Verify profile functionality", () => {
-  it("Create Verify profile", async () => {
+  xit("Create Verify profile", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();
@@ -19,7 +19,7 @@ describe("Verify profile functionality", () => {
     await browser.pause(3000);
     await verifyPage.successfulMessage.isDisplayed();
   });
-  it("Delete Verify profile", async () => {
+  xit("Delete Verify profile", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();

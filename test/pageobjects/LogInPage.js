@@ -1,4 +1,5 @@
 const homePage = require("../pageobjects/TelnyxHomePage.js");
+const profilePage = require("../pageobjects/myProfilePage.js");
 
 class LoginPage {
   get emailInput() {
@@ -13,23 +14,22 @@ class LoginPage {
   get errorMessage() {
     return $('[class*="ilxvtf"]');
   }
-
   async validateLoginError() {
     await this.errorMessage.isDisplayed();
   }
   async logInIfNeeded() {
     await homePage.logInBtn.click();
+    await browser.pause(3000);
+    await browser.saveScreenshot("./screenshots/screenshot.png");
     if (await this.emailInput.isDisplayed()) {
+      await this.emailInput.waitForDisplayed({ timeout: 20000 });
       await this.emailInput.addValue("testsne13@gmail.com");
       await this.passwordInput.addValue("Test1234test!");
+      await this.submitButton.waitForClickable({ timeout: 20000 });
       await browser.pause(5000);
       await this.submitButton.click();
-      await browser.waitUntil(
-        async () => await $('[class*="tx-27OtCC"]').isDisplayed(),
-        {
-          timeout: 120000,
-        }
-      );
+      await profilePage.profileIcon.waitForDisplayed({ timeout: 90000 });
+
     }
   }
 }

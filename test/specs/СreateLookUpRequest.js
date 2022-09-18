@@ -4,7 +4,7 @@ const myProfilePage = require("../pageobjects/myProfilePage.js");
 const lookUpPage = require("../pageobjects/LookUpPage.js");
 
 describe("Look Up request", () => {
-  it("Try to create look up request", async () => {
+  xit("Try to create look up request", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();

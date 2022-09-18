@@ -17,13 +17,18 @@ class HomePage {
   get solutionsTab() {
     return $('[class*="khahzD"]:nth-of-type(2)');
   }
+  get contactCenterBtnSolutionsDrpDwn() {
+    return $('[href="/use-cases/contact-center"]');
+  }
   get resourcesTab() {
     return $('[class*="khahzD"]:nth-of-type(4)');
+  }
+  get savingCalculatorBtnResourcesDrpDwn() {
+    return $('[href="/twilio-pricing-calculator"]');
   }
   get elementsResourceTab() {
     return $('header .mchNoDecorate[href*="/customer-stories"]');
   }
-
   get elementsSolutionsTab() {
     return $('header .mchNoDecorate[href*="/customer-stories"]');
   }
@@ -45,6 +50,28 @@ class HomePage {
   get headerOnNetworkPage() {
     return $('h1[class*="clNvhv gVIlze"]');
   }
+  get footerAboutUsBtn() {
+    return $('//*[text()= "About Us"]');
+  }
+  get aboutuUsHeader() {
+    return $('[class*="clUAcO"]');
+  }
+  get homePagebutton() {
+    return $('[id*="Logo"]');
+  }
+  get homePagePicture() {
+    return $('[class="sc-62badcbb-1 kNFjZ"]>div:nth-of-type(1)');
+  }
+  get blogBtnResorcesDrpDwn() {
+    return $('header .mchNoDecorate[href="/resources"]');
+  }
+  get searchIpnutBlogPage() {
+    return $('[type="search"]');
+  }
+  get wirelessBtnPricingDrpDwn() {
+    return $('header [href="/pricing/wireless-pricing"]');
+  }
+
   async launchWebApp() {
     await browser.url("https://telnyx.com");
     await browser.setWindowSize(1920, 1080);

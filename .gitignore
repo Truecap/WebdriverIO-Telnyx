@@ -4,4 +4,5 @@ allure-results
 node_modules
 reports/**
 allure-report/** 
-allure-results/**пше згдд
+allure-results/**
+Dockerfile2

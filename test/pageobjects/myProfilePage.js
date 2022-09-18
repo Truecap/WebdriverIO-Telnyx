@@ -1,4 +1,7 @@
 class MyProfilePage {
+  get popupSuggestion() {
+    return $('[class="intercom-s470fx e1jjo5ve2"]');
+  }
   get profileIcon() {
     return $('[class*="tx-27OtCC"]');
   }
@@ -31,10 +34,12 @@ class MyProfilePage {
   }
 
   async logOut() {
-    await this.homePagebutton.click();
+    if (await this.popupSuggestion.isDisplayed()) {
+      await this.popupSuggestion.click();
+    }
+    await browser.pause(3000);
     await this.profileIcon.moveTo();
-    // await browser.elementHover('[class*="tx-27OtCC"]');
-    await browser.pause(5000);
+    await browser.pause(3000);
     await this.logOutButton.click();
   }
   async validateSuccessfulLogin() {

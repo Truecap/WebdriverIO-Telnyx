@@ -4,7 +4,7 @@ const myProfilePage = require("../pageobjects/myProfilePage.js");
 const supportPage = require("../pageobjects/SupportPage.js");
 
 describe("Support Center", () => {
-  it("Verify support center button", async () => {
+  xit("Verify support center button", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();

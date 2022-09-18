@@ -4,11 +4,11 @@ const myProfilePage = require("../pageobjects/myProfilePage.js");
 const pricingPage = require("../pageobjects/PricingPage.js");
 
 describe("Pricing", () => {
-  it("Verify pricing for Ukraine", async () => {
+  xit("Verify pricing for Ukraine", async () => {
     await homePage.launchWebApp();
     await homePage.cookieWindowAccept();
     await logInPage.logInIfNeeded();
-    await browser.pause(3000);
+    await browser.saveScreenshot("./screenshots/screenshot5.png");
     await myProfilePage.profileIcon.moveTo();
     await browser.pause(3000);
     await myProfilePage.pricingButton.click();
