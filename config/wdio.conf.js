@@ -1,5 +1,8 @@
 const allure = require('allure-commandline')
 
+if(!process.env.BASE_URL)
+ process.env.BASE_URL = "https://telnyx.com"
+
 exports.config = {
     specs: [
         './test/specs/**/*.js'

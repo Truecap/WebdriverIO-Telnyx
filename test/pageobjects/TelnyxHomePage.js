@@ -73,7 +73,7 @@ class HomePage {
   }
 
   async launchWebApp() {
-    await browser.url("https://telnyx.com");
+    await browser.url(process.env.BASE_URL);
     await browser.setWindowSize(1920, 1080);
   }
 

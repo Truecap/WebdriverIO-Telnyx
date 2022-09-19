@@ -11,6 +11,7 @@
         "@wdio/selenium-standalone-service": "^7.24.0",
         "@wdio/spec-reporter": "^7.24.0",
         "chromedriver": "^105.0.0",
+        "cross-env":"7.0.3",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-docker-service": "^3.2.1"
     },
@@ -20,6 +21,8 @@
         "test:chrome:headless": "npx wdio config/wdio.chrome.headless.conf.js",
         "test:chrome:headless:login": "npx wdio config/wdio.chrome.headless.conf.js --spec Login.js",
         "test:chrome:ui:login": "npx wdio config/wdio.chrome.conf.js --spec Login.js",
+        "test:chrome:ui:login:prod": "cross-env BASE_URL=https://telnyx.com npx wdio config/wdio.chrome.conf.js --spec Login.js",
+        "test:chrome:ui:login:dev": "cross-env BASE_URL=https://dev.telnyx.com npx wdio config/wdio.chrome.conf.js --spec Login.js",
         "test:firefox:ui:login": "npx wdio config/wdio.firefox.conf.js --spec Login.js",
         "test:firefox:headless:login": "npx wdio config/wdio.firefox.headless.conf.js --spec Login.js",
         "test:firefox:headless": "npx wdio config/wdio.firefox.headless.conf.js",
